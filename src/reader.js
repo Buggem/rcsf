@@ -14,7 +14,7 @@ window.rcsf = {
 		this.message = message;
 	},
 	"logs": false, // Do logs? boolean
-	"render": function(comic) { // Main render function
+	"render": function(comic, _callback) { // Main render function
 		var cmcMeta = {
 			id: comic[0][0],
 			name: comic[0][1],
@@ -30,10 +30,12 @@ window.rcsf = {
 			thisPanel.innerHTML = comic[i];
 			cmcContainer.appendChild(thisPanel);
 		}
-		return new this.RCSFComic({
-			comicElem: cmcContainer,
-			comicMeta: cmcMeta,
-		});
+		if(_callback == "function") {
+			_callback(new this.RCSFComic({
+				comicElem: cmcContainer,
+				comicMeta: cmcMeta,
+			}));
+		}
 	},
 	"loadWebcomic": function(url, _callback) {
 		var xhttp = new XMLHttpRequest();
