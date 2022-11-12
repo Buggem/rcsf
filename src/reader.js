@@ -1,8 +1,8 @@
 const currentDate = new Date(); // So I never have to change the date
 var version = 0.1; // Version represented as decimal
 console.log("RCSF (pure JS edition) v" + version.toString() + " renderer OFFICIAL\n\u00A9 Buggem " + currentDate.getFullYear()); // Making my life easier so I never have to update the year.
-var pxname = "RCSF (pure JS edition) v" + version.toString() + " by Buggem";
-var pmp5 = {
+var rcsfname = "RCSF (pure JS edition) v" + version.toString() + " by Buggem";
+window.rcsf = {
 	"RCSFComic": class {
 		constructor(somejson) {
 			this.metadata = somejson.comicMeta;
@@ -55,4 +55,4 @@ var pmp5 = {
 		xhttp.send();
 	}
 };
-pmp5.RCSFException.prototype = Error.prototype; // Make RCSFException of type Error (make it a throwable error)
+window.rcsf.RCSFException.prototype = Error.prototype; // Make RCSFException of type Error (make it a throwable error)
