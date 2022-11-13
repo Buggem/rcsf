@@ -31,7 +31,7 @@
 		      rcsf.render(rcsf.format(reader.result), function(e) {
 			document.getElementById("comicStrip").innerHTML = "";
 			document.getElementById("comicStrip").appendChild(e.element);
-			document.getElementById("title").innerHTML = `RCSF Reader | ${e.metadata.series} | ${e.metadata.title} by ${e.metadata.author}`;
+			document.getElementById("title").innerHTML = `RCSF Reader | ${e.metadata.series} | ${e.metadata.name} by ${e.metadata.author}`;
 		      });
 		    }, false);
 
