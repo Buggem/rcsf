@@ -1,0 +1,14 @@
+name: UNITED FOREVER
+description: YOU'RE OUR GREAT MOTHERLAND RUS'.
+labels: []
+assignees: 
+  - 
+body:
+  - type: checkboxes
+    id: communist
+    attributes:
+      label: Confirm
+      description: Confirm
+      options:
+        - label: я глупый
+          required: true
