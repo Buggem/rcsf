@@ -25,7 +25,7 @@
 		    const reader = new FileReader();
 		    reader.addEventListener("load", () => {
 		      // this will then display a text file
-		      rcsf.render(reader.result, function(e) {
+		      rcsf.render(rcsf.format(reader.result), function(e) {
 			document.getElementById("comicStrip").innerHTML = "";
 			document.getElementById("comicStrip").appendChild(e.element);
 			document.getElementById("title").innerHTML = `RCSF Reader | ${e.metadata.series} | ${e.metadata.title} by ${e.metadata.author}`;
