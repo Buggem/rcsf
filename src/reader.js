@@ -30,7 +30,7 @@ window.rcsf = {
 			thisPanel.innerHTML = comic[i];
 			cmcContainer.appendChild(thisPanel);
 		}
-		if(_callback == "function") {
+		if(typeof _callback === "function") {
 			_callback(new this.RCSFComic({
 				comicElem: cmcContainer,
 				comicMeta: cmcMeta,
