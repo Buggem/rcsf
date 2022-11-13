@@ -38,8 +38,7 @@ window.rcsf = {
 		}
 	},
 	"format": function(rawComic) {
-		var comic = rawComic;
-		comic = (this.responseText).split('\n');
+		var comic = (rawComic).split('\n');
 		comic[0] = comic[0].split("\uFFFD");
 		return comic;
 	},
